@@ -65,6 +65,8 @@ saver=tf.train.Saver()
 def pca(X, n_components):
     pca1 = PCA(n_components = n_components)
     pca1.fit(X)
+    print(pca1.explained_variance_ratio_)
+    print(pca1.explained_variance_)
     return pca1.transform(X)
 
 
